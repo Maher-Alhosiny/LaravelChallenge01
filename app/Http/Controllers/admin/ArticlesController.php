@@ -42,6 +42,18 @@ class ArticlesController extends Controller
     public function store(Request $request)
     {
         //
+
+        $is_active=$request->has('is_active')?1:0;
+
+        $newArt=new Article();
+        $newArt->title=$request->input('art_title');
+        $newArt->content=$request->input('art_content');
+        $newArt->cat_id=$request->input('cat_id');
+        $newArt->is_active=$is_active;
+        $result=$newArt->save();
+ 
+        if($result>0)
+            return redirect()->route('art.index')->with('message', 'category addes successful ');
     }
 
     /**

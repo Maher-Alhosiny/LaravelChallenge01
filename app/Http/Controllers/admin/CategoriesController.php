@@ -51,9 +51,11 @@ class CategoriesController extends Controller
         $newCat->parent=$request->input('parent');
         $newCat->is_active=$is_active;
         $result=$newCat->save();
+        
+
         if($result>0)
-        return redirect()->route('categories.index')->with('message', 'category addes successful '.$result);
-        return redirect()->route('categories.index')->with('error', 'category addes successful '.$result);
+            return redirect()->route('categories.index')->with('message', 'category addes successful '.$result);
+            return redirect()->route('categories.index')->with('error', 'category addes successful '.$result);
 
     }
 

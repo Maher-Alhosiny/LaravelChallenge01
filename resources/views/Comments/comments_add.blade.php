@@ -44,11 +44,11 @@
                   <div class="card-body">
                     <div class="form-group">
                       <label for="exampleInputEmail1">Comment :</label>
-                      <input type="text" class="form-control"  name="cat_name" id="exampleInputEmail1">
+                      <input type="text" class="form-control"  name="art_Comment" id="exampleInputEmail1">
                     </div>
                     <div class="form-group">
                       <label for="exampleInputPassword1">Artical</label>
-                      <select class="custom-select form-control-border" name="parent" id="exampleSelectBorder">
+                      <select class="custom-select form-control-border" name="art_id" id="exampleSelectBorder">
                               @foreach ($allArt as $artical)
                                  <option value={{$artical->id}}>{{$artical->title}}</option>
 
@@ -63,7 +63,7 @@
 
                     <div class="form-group">
                       <label for="exampleInputPassword1">User ID</label>
-                      <select class="custom-select form-control-border" name="user" id="exampleSelectBorder">  
+                      <select class="custom-select form-control-border" name="user_id" id="exampleSelectBorder">  
                              @foreach ($allUser as $user)
                                  <option value={{$user->id}}>{{$user->name}}</option>
 

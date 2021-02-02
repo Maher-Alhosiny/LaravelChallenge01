@@ -12,7 +12,7 @@
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1>Simple Tables</h1>
+            <h1>Articals Tables</h1>
           </div>
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
@@ -50,6 +50,18 @@
 
 
 
+
+                  @if(session()->has('message'))
+                        <div class="alert alert-success">
+                            {{ session()->get('message') }}
+                        </div>
+                        @else <div class="alert alert-danger">
+                            {{ session()->get('error') }}
+                        </div>
+                    @endif
+
+
+                    
 
                   </div>
                 <table class="table table-hover text-nowrap">

@@ -46,6 +46,20 @@ class CommentsController extends Controller
     public function store(Request $request)
     {
         //
+
+        
+        $is_active=$request->has('is_active')?1:0;
+
+        $newCom=new Comment();
+        $newCom->comment=$request->input('art_Comment');
+        $newCom->article_id=$request->input('art_id');
+        $newCom->user_id=$request->input('user_id');
+        $newCom->is_active=$is_active;
+        $result=$newCom->save();
+
+        if($result>0)
+            return redirect()->route('com.index')->with('message', 'category addes successful ');
+
     }
 
     /**
