@@ -39,7 +39,7 @@
 
                 <div class="card-tools">
                   <div class="input-group input-group-sm" style="width: 150px;">
-                    <a href="{{route('categories.create')}}" class="btn btn-success">Add New</a>
+                    <a href="{{route('com.create')}}" class="btn btn-success">Add New</a>
 
                   </div>
                 </div>

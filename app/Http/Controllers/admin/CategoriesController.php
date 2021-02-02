@@ -31,7 +31,7 @@ class CategoriesController extends Controller
     {
         //
         $allCats=Category::select('id','name')->where('is_active',1)->get();
-        return view('admin.category_add')->with('allCats',$allCats);
+        return view('Categories.category_add')->with('allCats',$allCats);
     }
 
     /**

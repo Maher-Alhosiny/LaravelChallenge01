@@ -12,7 +12,7 @@
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1>Simple Tables</h1>
+            <h1>Categories table</h1>
           </div>
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
@@ -85,6 +85,7 @@
                       <td><div class="btn-group" role="group" aria-label="Basic example">
                         <a href="#" class="btn btn-info">Edit</a>
                         <a href="#" class="btn btn-danger">Delete</a>
+                        <a href="#" class="btn btn-Art"> Articals</a>
 
                       </div></td>
                     </tr>

@@ -4,7 +4,10 @@ namespace App\Http\Controllers\admin;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-use App\Models\Comment;
+use App\Models\Comment; 
+use App\Models\Article;
+use App\Models\User;
+
 
 
 class CommentsController extends Controller
@@ -29,8 +32,11 @@ class CommentsController extends Controller
     public function create()
     {
         //
+        $allArt=Article::select('id','title')->where('is_active',1)->get();
+        $allUsers=User::select('id','name')->get();
+        return view('Comments.comments_add')->with('allArt',$allArt)->with('allUser',$allUsers);
     }
-
+    
     /**
      * Store a newly created resource in storage.
      *

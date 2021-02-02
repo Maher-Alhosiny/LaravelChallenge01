@@ -5,7 +5,7 @@ namespace App\Http\Controllers\admin;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Article;
-
+use App\Models\Category;
 
 class ArticlesController extends Controller
 {
@@ -17,7 +17,7 @@ class ArticlesController extends Controller
     public function index()
     {
         //
-        $articles=Article::orderBy('id','desc')->get();;
+        $articles=Article::orderBy('id','desc')->get();
         return view ('Articles.articles_list')->with('arts',$articles);
     }
 
@@ -29,6 +29,8 @@ class ArticlesController extends Controller
     public function create()
     {
         //
+        $allCats=Category::select('id','name')->where('is_active',1)->get();
+        return view('Articles.articles_add')->with('allCats',$allCats);
     }
 
     /**

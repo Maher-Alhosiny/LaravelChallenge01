@@ -12,7 +12,7 @@
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1>Simple Tables</h1>
+            <h1>Add Category</h1>
           </div>
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
@@ -47,7 +47,7 @@
                       <input type="text" class="form-control"  name="cat_name" id="exampleInputEmail1">
                     </div>
                     <div class="form-group">
-                      <label for="exampleInputPassword1">Password</label>
+                      <label for="exampleInputPassword1">Parent Category</label>
                       <select class="custom-select form-control-border" name="parent" id="exampleSelectBorder">
                           <option value=0>Main Category</option>
                         @foreach ($allCats as $category)

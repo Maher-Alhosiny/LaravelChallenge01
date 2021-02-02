@@ -39,7 +39,7 @@
 
                 <div class="card-tools">
                   <div class="input-group input-group-sm" style="width: 150px;">
-                    <a href="{{route('categories.create')}}" class="btn btn-success">Add New</a>
+                    <a href="{{route('art.create')}}" class="btn btn-success">Add New</a>
 
                   </div>
                 </div>
@@ -75,6 +75,7 @@
                       <td><div class="btn-group" role="group" aria-label="Basic example">
                         <a href="#" class="btn btn-info">Edit</a>
                         <a href="#" class="btn btn-danger">Delete</a>
+                        <a href="#" class="btn btn-coms"> Comments </a>
 
                       </div></td>
                     </tr>
